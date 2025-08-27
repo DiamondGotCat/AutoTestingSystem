@@ -1,0 +1,40 @@
+==== TEST RUN LOG ====
+Test Name      : diamondgotcat.ypsh
+Test File      : /Users/runner/work/AutoTestingSystem/AutoTestingSystem/tests/diamondgotcat.ypsh.py
+Command        : /Library/Frameworks/Python.framework/Versions/3.12/bin/python /Users/runner/work/AutoTestingSystem/AutoTestingSystem/tests/diamondgotcat.ypsh.py
+Start (UTC)    : 2025-08-27T05:07:11.260987+00:00
+Epoch (ns)     : 1756271231260973000
+---- ENVIRONMENT ----
+python_executable: /Library/Frameworks/Python.framework/Versions/3.12/bin/python
+python_version   : 3.12.10 (v3.12.10:0cc81280367, Apr  8 2025, 08:46:59) [Clang 13.0.0 (clang-1300.0.29.30)]
+platform         : macOS-14.7.6-arm64-arm-64bit
+cwd              : /Users/runner/work/AutoTestingSystem/AutoTestingSystem
+tests_dir        : /Users/runner/work/AutoTestingSystem/AutoTestingSystem/tests
+os               : macos
+arch             : arm64
+----------------------
+---- STDOUT ----
+Test Case 1: print the 'ypsh.version'
+---- STDERR ----
+Traceback (most recent call last):
+  File "/Users/runner/work/AutoTestingSystem/AutoTestingSystem/tests/diamondgotcat.ypsh.py", line 89, in <module>
+    main()
+  File "/Users/runner/work/AutoTestingSystem/AutoTestingSystem/tests/diamondgotcat.ypsh.py", line 83, in main
+    print(runWithStdin(execFilePath, TestCase1))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/runner/work/AutoTestingSystem/AutoTestingSystem/tests/diamondgotcat.ypsh.py", line 57, in runWithStdin
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/runner/work/AutoTestingSystem/AutoTestingSystem/tmp/YPSH-macos-arm64'
+-----------------
+End   (UTC)    : 2025-08-27T05:07:12.555564+00:00
+Duration (s)   : 1.294577
+Return Code    : 1
+======================
