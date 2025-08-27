@@ -61,7 +61,7 @@ def runWithStdin(path: Path, content: str, errorOnNonZero: bool = True):
         text=True,
         check=errorOnNonZero
     )
-    return result
+    return str(result.stdout)
 
 TestCase1 = """
 print(ypsh.version)
