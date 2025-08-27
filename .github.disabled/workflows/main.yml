@@ -1,4 +1,4 @@
-name: AutoTestingSystem - DiamondGotCat
+name: AutoTestingSystem
 
 on:
   workflow_dispatch:

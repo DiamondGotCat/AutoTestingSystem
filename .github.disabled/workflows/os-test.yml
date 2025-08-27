@@ -24,7 +24,7 @@ jobs:
       - name: Set up Git user
         shell: bash
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name "AutoTestingSystem"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Set up Python
