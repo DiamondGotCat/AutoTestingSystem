@@ -22,3 +22,16 @@ You can also change the schedule by changing the `- cron: "0 0,6,12,18 * * *"` p
 ## Enable Actions
 To start working, rename `.github.disabled` to `.github`.
 Note that this will not work in environments where Github Actions is not running.
+
+## Platforms (GitHub Actions)
+Used Runner Types: [Normal Runners](https://github.com/actions/runner) [Partner Runners](http://github.com/actions/partner-runner-images)
+
+- macOS
+  - Intel (`macos-13`)
+  - Apple Silicon (`macos-14`)
+- Linux
+  - Intel/AMD (`ubuntu-22.04`)
+  - ARM (`ubuntu-22.04-arm`)
+- Windows
+  - Intel/AMD (`windows-2022`)
+  - ARM (`windows-11-arm`)
