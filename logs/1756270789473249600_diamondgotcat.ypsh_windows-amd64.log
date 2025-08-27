@@ -1,0 +1,24 @@
+==== TEST RUN LOG ====
+Test Name      : diamondgotcat.ypsh
+Test File      : D:\a\AutoTestingSystem\AutoTestingSystem\tests\diamondgotcat.ypsh.py
+Command        : C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\AutoTestingSystem\AutoTestingSystem\tests\diamondgotcat.ypsh.py
+Start (UTC)    : 2025-08-27T04:59:49.504498+00:00
+Epoch (ns)     : 1756270789473249600
+---- ENVIRONMENT ----
+python_executable: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe
+python_version   : 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform         : Windows-2022Server-10.0.20348-SP0
+cwd              : D:\a\AutoTestingSystem\AutoTestingSystem
+tests_dir        : D:\a\AutoTestingSystem\AutoTestingSystem\tests
+os               : windows
+arch             : amd64
+----------------------
+---- STDOUT ----
+
+---- STDERR ----
+
+-----------------
+End   (UTC)    : 2025-08-27T04:59:49.707632+00:00
+Duration (s)   : 0.203134
+Return Code    : 0
+======================
