@@ -76,7 +76,7 @@ for i in range(1,1000) {
 
 def main():
     osname, arch = get_os_arch()
-    stableTag = requests.get("https://ypsh-dgc.github.io/YPSH/channels/stable.txt").text
+    stableTag = requests.get("https://ypsh-dgc.github.io/YPSH/channels/stable.txt").text.strip()
     execFilePath = download_and_extract(stableTag, osname, arch)
 
     print("Test Case 1: print the 'ypsh.version'")
