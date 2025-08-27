@@ -125,10 +125,10 @@ def main() -> int:
     summary = []
     print(f"Found {len(tests)} test(s).")
     for name in tests:
-        print(f"▶ Running: {name} ...")
+        print(f"+ Running: {name} ...")
         rc, log_path = run_test(name)
         status = "OK" if rc == 0 else f"FAIL({rc})"
-        print(f"↳ {name}: {status} | log: {log_path.name}")
+        print(f"> {name}: {status} | log: {log_path.name}")
         summary.append((name, rc, log_path))
 
     failed = [s for s in summary if s[1] != 0]
