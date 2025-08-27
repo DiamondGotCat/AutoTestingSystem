@@ -3,6 +3,8 @@ A repository that automatically tests multiple software programs and generates l
 
 ## Before you begin
 
+<img width="480" height="270" alt="Screenshot from 2025-08-27 14-27-05" src="https://github.com/user-attachments/assets/d5bbf70e-4d1b-4d94-a8f1-04cde9606340" />
+
 ### 1. Copying this Template Repository
 Create a new repository based on this template repository.
 
