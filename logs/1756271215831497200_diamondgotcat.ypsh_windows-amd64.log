@@ -1,0 +1,43 @@
+==== TEST RUN LOG ====
+Test Name      : diamondgotcat.ypsh
+Test File      : D:\a\AutoTestingSystem\AutoTestingSystem\tests\diamondgotcat.ypsh.py
+Command        : C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe D:\a\AutoTestingSystem\AutoTestingSystem\tests\diamondgotcat.ypsh.py
+Start (UTC)    : 2025-08-27T05:06:55.862839+00:00
+Epoch (ns)     : 1756271215831497200
+---- ENVIRONMENT ----
+python_executable: C:\hostedtoolcache\windows\Python\3.12.10\x64\python.exe
+python_version   : 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform         : Windows-2022Server-10.0.20348-SP0
+cwd              : D:\a\AutoTestingSystem\AutoTestingSystem
+tests_dir        : D:\a\AutoTestingSystem\AutoTestingSystem\tests
+os               : windows
+arch             : amd64
+----------------------
+---- STDOUT ----
+Test Case 1: print the 'ypsh.version'
+---- STDERR ----
+Traceback (most recent call last):
+  File "D:\a\AutoTestingSystem\AutoTestingSystem\tests\diamondgotcat.ypsh.py", line 89, in <module>
+    main()
+  File "D:\a\AutoTestingSystem\AutoTestingSystem\tests\diamondgotcat.ypsh.py", line 83, in main
+    print(runWithStdin(execFilePath, TestCase1))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\AutoTestingSystem\AutoTestingSystem\tests\diamondgotcat.ypsh.py", line 57, in runWithStdin
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 1622, in _communicate
+    self._stdin_write(input)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 1143, in _stdin_write
+    self.stdin.write(input)
+TypeError: write() argument must be str, not bytes
+-----------------
+End   (UTC)    : 2025-08-27T05:06:57.410413+00:00
+Duration (s)   : 1.547574
+Return Code    : 1
+======================
