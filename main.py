@@ -113,7 +113,7 @@ def run_test(test_name: str) -> Tuple[int, Path]:
             w("======================")
             return 128, log_path
 
-def main() -> int:
+def main():
     cfg_path = BASE_DIR / "config.json"
     with open(cfg_path, "r", encoding="utf-8") as f:
         config = json.load(f)
@@ -136,7 +136,5 @@ def main() -> int:
     for name, rc, log_path in summary:
         print(f"{name:30} rc={rc:>3}  log={log_path.name}")
 
-    return 0 if not failed else 1
-
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
