@@ -80,7 +80,7 @@ def main():
     execFilePath = download_and_extract(stableTag, osname, arch)
 
     print("Test Case 1: print the 'ypsh.version'")
-    runWithStdin(execFilePath, TestCase1)
+    print(runWithStdin(execFilePath, TestCase1))
 
     print("Test Case 2: 'for' Syntax")
-    runWithStdin(execFilePath, TestCase2)
+    print(runWithStdin(execFilePath, TestCase2))
