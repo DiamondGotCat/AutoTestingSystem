@@ -84,3 +84,6 @@ def main():
 
     print("Test Case 2: 'for' Syntax")
     print(runWithStdin(execFilePath, TestCase2))
+
+if __name__ == "__main__":
+    main()
