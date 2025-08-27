@@ -1,0 +1,51 @@
+name: OS Test (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      runner:
+        description: 'Runner label (e.g., ubuntu-22.04, macos-13, windows-2022)'
+        required: true
+        type: string
+      python-version:
+        description: 'Python version'
+        required: false
+        default: '3.12'
+        type: string
+
+jobs:
+  test:
+    runs-on: ${{ inputs.runner }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Testing
+        run: |
+          python main.py
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "Upload Test Result" || echo "No changes to commit"
+
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push
