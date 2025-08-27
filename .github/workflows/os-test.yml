@@ -22,6 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Git user
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -32,27 +33,32 @@ jobs:
           python-version: ${{ inputs.python-version }}
 
       - name: Install dependencies
+        shell: bash
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Testing
+        shell: bash
         run: |
           mkdir -p results/${{ inputs.runner }}
           python main.py --output results/${{ inputs.runner }}/result.json || python main.py
 
       - name: Pull latest (rebase) before committing
+        shell: bash
         run: |
           branch="${{ github.ref_name }}"
           git fetch origin "$branch"
           git rebase "origin/$branch" || (echo "Rebase failed"; git rebase --abort; exit 1)
 
       - name: Commit changes
+        shell: bash
         run: |
           git add -A
           git commit -m "Upload Test Result (${{ inputs.runner }})" || echo "No changes to commit"
 
       - name: Push changes (with retry)
+        shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
